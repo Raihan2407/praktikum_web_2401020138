@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::get('/latihan-php', function () {
     $nama = 'Raihan Darma Putra';
-    $nilai = [80, 75, 90];
+    $nilai = [80, 75, 90, 85, 78];
 
     $hitungRataRata = function (array $data): float {
         $total = 0;
