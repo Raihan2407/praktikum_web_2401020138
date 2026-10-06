@@ -12,4 +12,4 @@
     <p>NIM: {{ $data['nim'] }}</p>
     <p><a href="/form-mahasiswa">Kembali ke form</a></p>
 </body>
-</html>
+</html> 

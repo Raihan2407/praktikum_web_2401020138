@@ -33,12 +33,11 @@ Route::get('/latihan-php', function () {
     ));
 });
 
-
 Route::get('/form-mahasiswa', function () {
     return view('form-mahasiswa');
 });
 
-$prosesForm = function (Request $request) {
+Route::post('/form-mahasiswa', function (Request $request) {
     $dataBersih = [
         'nama' => strip_tags(trim((string) $request->input('nama'))),
         'email' => filter_var(
@@ -64,7 +63,7 @@ $prosesForm = function (Request $request) {
         'usia.min' => 'Usia minimal 17 tahun.',
         'usia.max' => 'Usia maksimal 60 tahun.',
         'nim.required' => 'NIM wajib diisi.',
-        'nim.digits_between' => 'NIM harus berupa angka 8-12 digit.',
+        'nim.digits_between' => 'NIM harus berisi 8 sampai 12 digit.',
     ]);
 
     if ($validator->fails()) {
@@ -77,11 +76,4 @@ $prosesForm = function (Request $request) {
     $data['usia'] = (int) $data['usia'];
 
     return view('hasil-form', ['data' => $data]);
-};
-
-Route::post('/form-mahasiswa', $prosesForm);
-Route::post('/hasil-form', $prosesForm);
-
-Route::get('/hasil-form', function () {
-    return redirect('/form-mahasiswa');
 });
