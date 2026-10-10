@@ -1,59 +1,168 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Praktikum Pemrograman Web (INF11197)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Repository ini berisi hasil praktikum **Pemrograman Web** menggunakan framework **Laravel**, dikerjakan bertahap per pertemuan pada satu proyek yang sama.
 
-## About Laravel
+## Identitas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| | |
+|---|---|
+| Nama | Raihan Darma Putra |
+| NIM | 2401020138 |
+| Program Studi | Teknik Informatika |
+| Mata Kuliah | Praktikum Pemrograman Web (INF11197), Semester V |
+| Institusi | Fakultas Teknik dan Teknologi Kemaritiman, Universitas Maritim Raja Ali Haji |
+| Dosen | Berta Erwin Slam, S.T., M.Kom.; Muhamad Radzi Rathomi, S.Kom., M.Cs.; Nolan Efranda, M.Kom. |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Teknologi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP 8.2 atau lebih baru
+- Laravel 12
+- MySQL / MariaDB (diakses melalui PDO)
+- Blade (HTML polos tanpa CSS)
+- Composer, Node.js, Git
+- Laragon sebagai lingkungan pengembangan lokal
 
-## Learning Laravel
+## Daftar Pertemuan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+| Pertemuan | Topik | Hasil | Alamat uji |
+|---|---|---|---|
+| 1 | Lingkungan pengembangan web dan Laravel | Proyek Laravel bawaan, repository Git awal | `/` |
+| 2 | Sintaks dasar PHP pada proyek Laravel | Variabel, operator, percabangan, perulangan, dan fungsi | `/latihan-php` |
+| 3 | Form, request, sanitasi, dan validasi | Form mahasiswa dengan validasi server-side | `/form-mahasiswa` |
+| 4 | Perancangan basis data dan SQL dasar | Skema `program_studi` dan `mahasiswa`, DDL, DML | file SQL di `database/sql/` |
+| 5 | Koneksi Laravel ke basis data dengan PDO | Prepared statement dan penanganan error | `/mahasiswa` dan `/mahasiswa/{nim}` |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Diagram
 
-## Laravel Sponsors
+### Pertemuan 1: Alur client-server dan HTTP
+![Alur client-server dan HTTP](images/Diagram_Client_Server_HTTP.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Pertemuan 3: Alur GET, POST, sanitasi, dan validasi
+![Alur GET, POST, sanitasi, dan validasi](images/Diagram_Alur_GET_POST_Validasi.png)
 
-### Premium Partners
+### Pertemuan 4: Skema relasi data mahasiswa
+![ERD program studi dan mahasiswa](images/ERD_Program_Studi_Mahasiswa.png)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Pertemuan 5: Alur koneksi Laravel ke basis data
+![Alur koneksi Laravel ke basis data](images/Diagram_Alur_Koneksi_Laravel_Database.png)
 
-## Contributing
+## Struktur yang Relevan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```text
+.
+├── database/
+│   └── sql/
+│       ├── pertemuan4_struktur.sql   # DDL: database dan tabel
+│       └── pertemuan4_data.sql       # DML: data latihan
+├── images/                           # diagram untuk laporan
+├── resources/views/
+│   ├── latihan-php.blade.php         # Pertemuan 2
+│   ├── form-mahasiswa.blade.php      # Pertemuan 3
+│   ├── hasil-form.blade.php          # Pertemuan 3
+│   └── mahasiswa.blade.php           # Pertemuan 5
+├── routes/web.php                    # seluruh route praktikum
+└── .env.example                      # contoh konfigurasi tanpa kata sandi
+```
 
-## Code of Conduct
+## Cara Menjalankan
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 1. Persiapan
 
-## Security Vulnerabilities
+Pastikan PHP, Composer, dan MySQL/MariaDB sudah terpasang, lalu aktifkan layanan MySQL (misalnya lewat Laragon).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 2. Clone dan pasang dependensi
 
-## License
+```bash
+git clone https://github.com/Raihan2407/<nama-repository>.git
+cd <nama-repository>
+composer install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 3. Atur file `.env`
+
+```bash
+copy .env.example .env
+php artisan key:generate
+```
+
+Lalu sesuaikan isi `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=praktikum_web_2401020138
+DB_USERNAME=root
+DB_PASSWORD=
+
+SESSION_DRIVER=file
+```
+
+> `SESSION_DRIVER=file` diperlukan karena basis data praktikum hanya berisi tabel `program_studi` dan `mahasiswa`. Dengan driver `database`, Laravel akan mencari tabel `sessions` yang tidak ada dan menampilkan error.
+
+### 4. Siapkan basis data
+
+Jalankan dari folder proyek:
+
+```bash
+mysql -u root -p
+```
+
+```sql
+SOURCE database/sql/pertemuan4_struktur.sql;
+SOURCE database/sql/pertemuan4_data.sql;
+```
+
+Jalankan masing-masing file **sekali saja**, dengan urutan struktur lalu data.
+
+### 5. Jalankan aplikasi
+
+```bash
+php artisan config:clear
+php artisan serve
+```
+
+Buka `http://127.0.0.1:8000`.
+
+## Daftar Route
+
+| Method | URL | Keterangan |
+|---|---|---|
+| GET | `/` | Halaman bawaan Laravel |
+| GET | `/latihan-php` | Hitung rata-rata nilai dan status kelulusan |
+| GET | `/form-mahasiswa` | Menampilkan form mahasiswa |
+| POST | `/form-mahasiswa` | Sanitasi dan validasi input, lalu menampilkan hasil |
+| GET | `/mahasiswa` | Menampilkan seluruh data mahasiswa dari basis data |
+| GET | `/mahasiswa/{nim}` | Menampilkan satu mahasiswa berdasarkan NIM (prepared statement) |
+
+Contoh pengujian Pertemuan 5:
+
+- `/mahasiswa` menampilkan tiga data mahasiswa.
+- `/mahasiswa/2401010002` hanya menampilkan satu data.
+- `/mahasiswa/9999999999` menampilkan pesan "Data tidak ditemukan."
+- Jika konfigurasi basis data salah, aplikasi menampilkan pesan error sederhana dengan status HTTP 500.
+
+## Catatan Keamanan
+
+- File `.env` **tidak** disertakan di repository karena dapat memuat kredensial. Gunakan `.env.example` sebagai acuan.
+- Nilai NIM pada query tidak digabungkan langsung ke teks SQL, tetapi dikirim lewat `execute()` pada prepared statement PDO.
+- Data pada file SQL adalah data latihan fiktif.
+
+## Riwayat Commit
+
+```text
+Inisialisasi proyek Laravel
+Pertemuan 2 latihan PHP dasar
+Pertemuan 3 form dan validasi
+Pertemuan 4 perancangan basis data
+Pertemuan 5 koneksi PDO
+Tambah folder images untuk diagram
+```
+
+## Referensi
+
+- Slam, B. E., Rathomi, M. R., & Efranda, N. (2026). *Modul Praktikum Pemrograman Web Pertemuan 1 sampai 5*. Universitas Maritim Raja Ali Haji.
+- [Laravel Documentation](https://laravel.com/docs)
+- [PHP Manual](https://www.php.net/manual/en/)
+- [MySQL Reference Manual](https://dev.mysql.com/doc/refman/8.4/en/)
+- [Git Documentation](https://git-scm.com/doc)
