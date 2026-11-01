@@ -11,7 +11,7 @@ Repository ini berisi hasil praktikum **Pemrograman Web** menggunakan framework 
 | Program Studi | Teknik Informatika |
 | Mata Kuliah | Praktikum Pemrograman Web (INF11197), Semester V |
 | Institusi | Fakultas Teknik dan Teknologi Kemaritiman, Universitas Maritim Raja Ali Haji |
-| Dosen | Berta Erwin Slam, S.T., M.Kom.; Muhamad Radzi Rathomi, S.Kom., M.Cs.; Nolan Efranda, M.Kom. |
+| Dosen | Nolan Efranda, M.Kom. |
 
 ## Teknologi
 
