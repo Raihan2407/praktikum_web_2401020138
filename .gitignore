@@ -22,3 +22,11 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+/.agents
+/.claude
+/.codex
+/.mcp.json
+/AGENTS.md
+/CLAUDE.md
+/boost.json
