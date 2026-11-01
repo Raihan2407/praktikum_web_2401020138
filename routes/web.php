@@ -148,6 +148,14 @@ Route::post('/mahasiswa', function (Request $request) {
         'email' => ['required', 'email', 'max:100'],
         'usia' => ['required', 'integer', 'min:15', 'max:100'],
         'program_studi_id' => ['required', 'integer'],
+    ], [
+        'nim.required' => 'NIM wajib diisi.',
+        'nama.required' => 'Nama wajib diisi.',
+        'email.required' => 'Email wajib diisi.',
+        'email.email' => 'Format email tidak valid.',
+        'usia.required' => 'Usia wajib diisi.',
+        'usia.integer' => 'Usia harus berupa angka.',
+        'program_studi_id.required' => 'Program studi wajib dipilih.',
     ]);
 
     try {
@@ -235,6 +243,14 @@ Route::put('/mahasiswa/{id}', function (
         'email' => ['required', 'email', 'max:100'],
         'usia' => ['required', 'integer', 'min:15', 'max:100'],
         'program_studi_id' => ['required', 'integer'],
+    ], [
+        'nim.required' => 'NIM wajib diisi.',
+        'nama.required' => 'Nama wajib diisi.',
+        'email.required' => 'Email wajib diisi.',
+        'email.email' => 'Format email tidak valid.',
+        'usia.required' => 'Usia wajib diisi.',
+        'usia.integer' => 'Usia harus berupa angka.',
+        'program_studi_id.required' => 'Program studi wajib dipilih.',
     ]);
 
     try {
